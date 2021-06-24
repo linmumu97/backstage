@@ -3,8 +3,8 @@ kind: Component
 metadata:
   name: wayback-search
   description: Search of the wayback machine
-  annotations:
-    backstage.io/techdocs-ref: value
+#   annotations:
+#     backstage.io/techdocs-ref: value
 spec:
   type: service
   lifecycle: production
@@ -13,3 +13,15 @@ spec:
     - wayback-search
   consumesApis:
     - wayback-archive
+    
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: example
+  description: example.com
+  annotations:
+    backstage.io/techdocs-ref: value
+spec:
+  type: website
+  lifecycle: production
+  owner: user:guest
